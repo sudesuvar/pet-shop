@@ -7,12 +7,12 @@
         <meta name="keywords" content="Admin,Panel,HTML,CSS,XML,JavaScript">
         <meta name="author" content="Erik Campobadal">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/uikit.min.css" />
+        <link rel="stylesheet" href="css/uikit.min.css" />
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/notyf.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/notyf.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>        <script src="js/uikit.min.js" ></script>
-        <script src="../js/uikit-icons.min.js" ></script>
+        <script src="js/uikit-icons.min.js" ></script>
     </head>
     <body>
         <div uk-sticky class="uk-navbar-container tm-navbar-container uk-active">
@@ -45,7 +45,7 @@
         </div>
         <div id="sidebar" class="tm-sidebar-left uk-background-default">
             <div class="user">
-                <img id="avatar" width="100" class="uk-border-circle" src="../images/avatar.jpg" />
+                <img id="avatar" width="100" class="uk-border-circle" src="images/avatar.jpg" />
                 <div class="uk-margin-top"></div>
                 <div id="name" class="uk-text-truncate">Admin</div>
                 <div id="email" class="uk-text-truncate">admin@mail.com</div>
@@ -54,11 +54,12 @@
             <br />
             <ul class="uk-nav uk-nav-default">
                 <li class="uk-nav-header">
-                    UI Elements
+                    İçerikler
                 </li>
-                <li><a href="buttons.html">İletişim</a></li>
-                <li><a href="components.html">Components</a></li>
+                <li><a href="information.html">Misyon ve Vizyon</a></li>
                 <li><a href="communication.html">İletişim</a></li>
+                <li><a href="products.html">Ürünler</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li class="uk-nav-header">
                     Pages
                 </li>
@@ -80,43 +81,40 @@
             </div>
             <div class="uk-section-small">
                 <div class="uk-container uk-container-large">
-                    <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-1@l">
+                    <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@l">
                         <div>
                             <div class="uk-card uk-card-default">
                                 <div class="uk-card-header">
-                                    İletişim
+                                    Blog Ekle
                                 </div>
                                 <div class="uk-card-body">
-                                    <form class="uk-form-stacked">
-                                        <!-- Adres -->
+                                    <form id="blogForm">
                                         <div class="uk-margin">
-                                            <label class="uk-form-label" for="address">Adres</label>
-                                            <div class="uk-form-controls">
-                                                <textarea id="address" class="uk-textarea" rows="3" placeholder="Adresinizi giriniz..."></textarea>
-                                            </div>
+                                            <input id="blogTitle" class="uk-input" type="text" placeholder="Başlık" required>
                                         </div>
-            
-                                        <!-- Telefon -->
                                         <div class="uk-margin">
-                                            <label class="uk-form-label" for="phone">Telefon</label>
-                                            <div class="uk-form-controls">
-                                                <input id="phone" class="uk-input" type="tel" placeholder="(+90)(5xx xxx xxxx)">
-                                            </div>
+                                            <input id="blogDate" class="uk-input" type="date" required>
                                         </div>
-            
-                                        <!-- E-posta -->
                                         <div class="uk-margin">
-                                            <label class="uk-form-label" for="email">E-posta</label>
-                                            <div class="uk-form-controls">
-                                                <input id="email" class="uk-input" type="email" placeholder="E-posta adresinizi giriniz...">
-                                            </div>
+                                            <textarea id="blogParagraph" class="uk-textarea" placeholder="İçerik" rows="4" required></textarea>
                                         </div>
-            
-                                        <!-- Gönder Butonu -->
                                         <div class="uk-margin">
-                                            <button class="uk-button uk-button-primary" type="submit">Kaydet</button>
+                                            <input type="file" id="blogImage" accept="image/*" required>
+                                        </div>
+                                        <div class="uk-margin">
+                                            <button type="submit" class="uk-button uk-button-primary">Add Blog</button>
                                         </div>
                                     </form>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Added Blogs Section -->
+                        <div>
+                            <h4>Eklenen Bloglar:</h4>
+                            <div id="blogList" class="uk-overflow-auto">
+                                <div id="blogContainer" class="uk-flex uk-flex-column">
+                                    <!-- Blogs will appear here -->
                                 </div>
                             </div>
                         </div>
@@ -124,18 +122,22 @@
                 </div>
             </div>
             
+            
         </div>
         <!-- Load More Javascript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js" integrity="sha256-UGwvyUFH6Qqn0PSyQVw4q3vIX0wV1miKTracNJzAWPc=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js" integrity="sha256-rqEXy4JTnKZom8mLVQpvni3QHbynfjPmPxQVsPZgmJY=" crossorigin="anonymous"></script>
-        <script src="../js/notyf.min.js"></script>
+        <script src="js/notyf.min.js"></script>
         <!-- Required Overall Script -->
-        <script src="../js/script.js"></script>
+        <script src="js/script.js"></script>
         <!-- Status Updater -->
-        <script src="../js/status.js"></script>
+        <script src="js/status.js"></script>
         <!-- Sample Charts -->
-        <script src="../js/charts.js"></script>
+        <script src="js/charts.js"></script>
         <!-- Sample Notifications -->
-        <script src="../js/notification.js"></script>
+        <script src="js/notification.js"></script>
+        <!-- Sample blog -->
+        <script src="js/blog.js"></script>
+
     </body>
 </html>
