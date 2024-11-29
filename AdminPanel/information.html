@@ -57,6 +57,7 @@
                 <li class="uk-nav-header">
                     İçerikler
                 </li>
+                <li><a href="slogan.html">Slogan</a></li>
                 <li><a href="information.html">Misyon ve Vizyon</a></li>
                 <li><a href="communication.html">İletişim</a></li>
                 <li><a href="products.html">Ürünler</a></li>
@@ -80,6 +81,7 @@
                     </p>
                 </div>
             </div>
+         
             <div class="uk-section-small">
                 <div class="uk-container uk-container-large">
                     <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-1@l">
@@ -94,16 +96,22 @@
                                         <label class="uk-form-label" for="misyon-textarea">Misyon</label>
                                         <textarea id="misyon-textarea" class="uk-textarea" rows="5" placeholder="Misyon..."></textarea>
                                     </div>
-                                    <button id="save-misyon" class="uk-button uk-button-primary">Kaydet</button>
-                                    
-                                    <hr class="uk-divider-icon">
-                                    
-                                    <!-- Vizyon Alanı -->
                                     <div class="uk-margin">
                                         <label class="uk-form-label" for="vizyon-textarea">Vizyon</label>
                                         <textarea id="vizyon-textarea" class="uk-textarea" rows="5" placeholder="Vizyon..."></textarea>
                                     </div>
-                                    <button id="save-vizyon" class="uk-button uk-button-secondary">Kaydet</button>
+                                    
+                                    <!-- Fotoğraf Yükleme Alanı -->
+                                    <div class="uk-margin">
+                                        <label class="uk-form-label" for="photo-upload">Fotoğraf Yükle</label>
+                                        <input type="file" id="photo-upload" class="uk-input" accept="image/*">
+                                    </div>
+                                    <div class="uk-margin">
+                                        <img id="preview-image" src="#" alt="Fotoğraf Önizlemesi" style="max-width: 50%; display: none;">
+                                    </div>
+
+                                    <!-- Kaydet Butonu -->
+                                    <button id="save-button" class="uk-button uk-button-primary">Kaydet</button>
                                 </div>
                             </div>
                         </div>
@@ -111,19 +119,35 @@
                 </div>
             </div>
             
-            
+            <!-- Kaydedilen Veriler -->
+            <div id="saved-data" class="uk-section-small">
+                <div class="uk-container uk-container-large">
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-header">
+                            Kaydedilen Misyon, Vizyon ve Fotoğraf
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 id="saved-misyon"></h3>
+                            <p id="saved-vizyon"></p>
+                            <img id="saved-photo" src="#" alt="Kaydedilen Fotoğraf" style="max-width: 50%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Load More Javascript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js" integrity="sha256-UGwvyUFH6Qqn0PSyQVw4q3vIX0wV1miKTracNJzAWPc=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js" integrity="sha256-rqEXy4JTnKZom8mLVQpvni3QHbynfjPmPxQVsPZgmJY=" crossorigin="anonymous"></script>
-        <script src="js/notyf.min.js"></script>
-        <!-- Required Overall Script -->
-        <script src="js/script.js"></script>
-        <!-- Status Updater -->
-        <script src="js/status.js"></script>
-        <!-- Sample Charts -->
-        <script src="js/charts.js"></script>
-        <!-- Sample Notifications -->
-        <script src="js/notification.js"></script>
-    </body>
-</html>
+          <!-- Load More Javascript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js" integrity="sha256-UGwvyUFH6Qqn0PSyQVw4q3vIX0wV1miKTracNJzAWPc=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js" integrity="sha256-rqEXy4JTnKZom8mLVQpvni3QHbynfjPmPxQVsPZgmJY=" crossorigin="anonymous"></script>
+          <script src="js/notyf.min.js"></script>
+          <!-- Required Overall Script -->
+          <script src="js/script.js"></script>
+          <!-- Status Updater -->
+          <script src="js/status.js"></script>
+          <!-- Sample Charts -->
+          <script src="js/charts.js"></script>
+          <!-- Sample Notifications -->
+          <script src="js/notification.js"></script>
+          <!-- Send Informations -->
+          <script src="js/information-admin.js"></script>
+      </body>
+  </html>
