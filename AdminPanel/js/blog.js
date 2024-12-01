@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const blogContainer = document.getElementById('blogContainer');
     let blogCount = 0; // Track the number of blogs added
 
+    // Load existing blogs from localStorage on page load
+    const savedBlogs = JSON.parse(localStorage.getItem('blogs')) || [];
+    savedBlogs.forEach(blog => {
+        addBlogToDOM(blog);
+    });
+    blogCount = savedBlogs.length;
+
     // Handle form submission
     blogForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -29,15 +36,40 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Create an object to hold the blog details
-        const blogData = {
-            title,
-            date,
-            paragraph,
-            image
-        };
+        // Convert image to Base64
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const imageBase64 = event.target.result;
 
-        // Create blog elements
+            // Create an object to hold the blog details
+            const blogData = {
+                title,
+                date,
+                paragraph,
+                image: imageBase64 // Store Base64 image data
+            };
+
+            // Save blog to localStorage
+            const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+            blogs.push(blogData);
+            localStorage.setItem('blogs', JSON.stringify(blogs));
+
+            // Add blog to DOM
+            addBlogToDOM(blogData);
+
+            // Increment the blog count
+            blogCount++;
+
+            // Reset the form fields
+            blogForm.reset();
+        };
+        reader.readAsDataURL(image);
+    });
+
+    // Function to add a blog to the DOM
+    function addBlogToDOM(blogData) {
+        const { title, date, paragraph, image } = blogData;
+
         const blogDiv = document.createElement('div');
         blogDiv.classList.add('uk-card', 'uk-card-default', 'uk-margin-small');
 
@@ -58,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Image
         const img = document.createElement('img');
         img.classList.add('uk-width-1-1');
-        img.src = URL.createObjectURL(image);
+        img.src = image;
         img.alt = title;
 
         // Delete button
@@ -68,6 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
         deleteButton.addEventListener('click', function () {
             blogContainer.removeChild(blogDiv);
             blogCount--; // Decrease blog count when removed
+
+            // Remove blog from localStorage
+            const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+            const updatedBlogs = blogs.filter(blog => blog.title !== title || blog.date !== date);
+            localStorage.setItem('blogs', JSON.stringify(updatedBlogs));
         });
 
         // Append everything to the blog container
@@ -80,11 +117,5 @@ document.addEventListener("DOMContentLoaded", function () {
         blogDiv.appendChild(blogBody);
 
         blogContainer.appendChild(blogDiv);
-
-        // Increment the blog count
-        blogCount++;
-
-        // Reset the form fields
-        blogForm.reset();
-    });
+    }
 });

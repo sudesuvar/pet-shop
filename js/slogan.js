@@ -11,12 +11,14 @@ window.onload = function () {
 
     // Display the YouTube URL if it exists
     if (youtubeUrl) {
-        document.querySelector("#hero-youtube-url").textContent = youtubeUrl;
+        document.querySelector("#hero-youtube-url").src = youtubeUrl;
     }
 
     // Display the image if it exists
-    if (image) {
+    /*if (image) {
         document.querySelector("#hero-image").src = "path/to/images/" + image; // Adjust path to where images are stored
         document.querySelector("#hero-image-name").textContent = image;
-    }
+    }*/
+    const photoElement = document.querySelector('#hero-image-name');
+    photoElement.src = image;
 }
