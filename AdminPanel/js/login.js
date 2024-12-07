@@ -28,7 +28,7 @@
           // Check if email and password match predefined credentials
           if (isValid) {
             if (
-              emailInput.value === "sude@gmail.com" &&
+              emailInput.value === "admin@mail.com" &&
               passwordInput.value === "123456"
             ) {
               // Redirect to index.html if credentials are correct
