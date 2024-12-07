@@ -44,9 +44,11 @@ Bu projede HTML, CSS ve JavaScript kullanılarak hem kullanıcı arayüzü hem d
 ## Kurulum ve Kullanım
 
 1. **Projeyi Klonla:**
-   ```bash
-   git clone https://github.com/kullanici-adi/findik-petshop.git
-
+Öncelikle projeyi kendi bilgisayarınıza klonlayın. Git yüklü değilse, [Git'i buradan](https://git-scm.com/) indirip kurabilirsiniz.
+```bash
+git clone https://github.com/kullaniciadi/proje-adi.git
+cd proje-adi
+```
 ![Akış Şeması](https://github.com/mraposka/VTYS-Eczane/blob/main/otomasyonImage/7.png)
 
 ## Hazırlayanlar
