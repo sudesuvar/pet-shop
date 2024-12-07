@@ -55,14 +55,16 @@ Bu projede HTML, CSS ve JavaScript kullanılarak hem kullanıcı arayüzü hem d
 git clone https://github.com/kullaniciadi/proje-adi.git
 cd proje-adi
 ```
+## Hazırlayanlar
+- Sude Deniz SUVAR / sudesuvar51@gmail.com
+
 ## Daha Fazla Fotoğraf
 ![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/5.png)
 ![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/6.png)
 ![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/7.png)
 ![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/8.png)
 
-## Hazırlayanlar
-- Sude Deniz SUVAR / sudesuvar51@gmail.com
+
 
 
 
