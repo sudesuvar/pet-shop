@@ -3,6 +3,10 @@
 Fındık Petshop, hayvan ürünlerinin satıldığı ve hayvanlar hakkında bilgilendirici blog yazılarının paylaşıldığı bir web sitesi projesidir. Bu proje, kullanıcı dostu bir arayüz ve admin paneli ile site içeriklerini kolayca yönetebilme imkanı sunar.
 
 ---
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/1.png)
+
+---
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/4.png)
 
 ## Proje Özeti
 
@@ -19,6 +23,7 @@ Bu projede HTML, CSS ve JavaScript kullanılarak hem kullanıcı arayüzü hem d
    - Misyon, vizyon ve iletişim içeriklerini günceller.
 
 ---
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/2.png)
 
 ## Özellikler
 
@@ -40,6 +45,7 @@ Bu projede HTML, CSS ve JavaScript kullanılarak hem kullanıcı arayüzü hem d
 - **JavaScript**: Dinamik işlemleri ve etkileşimleri gerçekleştirmek için.  
 
 ---
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/3.png)
 
 ## Kurulum ve Kullanım
 
@@ -49,7 +55,11 @@ Bu projede HTML, CSS ve JavaScript kullanılarak hem kullanıcı arayüzü hem d
 git clone https://github.com/kullaniciadi/proje-adi.git
 cd proje-adi
 ```
-![Akış Şeması](https://github.com/mraposka/VTYS-Eczane/blob/main/otomasyonImage/7.png)
+## Daha Fazla Fotoğraf
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/5.png)
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/6.png)
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/7.png)
+![Akış Şeması](https://github.com/sudesuvar/pet-shop/blob/main/img/8.png)
 
 ## Hazırlayanlar
 - Sude Deniz SUVAR / sudesuvar51@gmail.com
